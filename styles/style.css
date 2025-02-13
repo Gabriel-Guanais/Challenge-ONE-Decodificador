@@ -14,27 +14,33 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .cabecalho {
-    margin-bottom: 155px;
+    margin-bottom: 50px;
 }
 
 .cabecalho__img__logo {
     width: 120px;
     height: 48px;
-    margin: 40px 0px 0px 40px;
+    margin: 20px;
 }
 
 .container__div {
     display: flex;
     justify-content: center;
     gap: 100px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 /* CAIXA DE TEXTO */
 textarea {
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
     height: 500px;
     border-radius: 20px;
     border: none;
@@ -43,15 +49,14 @@ textarea {
     color: rgba(240, 248, 255, 0.649);
     outline: none;
     padding: 15px;
+    resize: none;
 }
 
 /* IMG ANJO */
 .img__anjo {
-    width: 668px;
-}
-
-.main__container {
-    margin-left: 200px;
+    width: 100%;
+    max-width: 668px;
+    height: auto;
 }
 
 /* BOTOES */
@@ -59,12 +64,14 @@ textarea {
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin-top: 5px;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Botões sempre lado a lado */
 }
 
 /* Estilos básicos dos botões */
 .first__bnt, .second__bnt {
-    width: 328px;
+    width: 100%;
+    max-width: 328px;
     height: 67px;
     border: none;
     border-radius: 15px;
@@ -93,23 +100,26 @@ textarea {
 
 #btnCopia {
     display: none;
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
+    margin: 20px auto;
 }
 
 /* RESULTADO */
 #resultado {
     display: none;
     background-color: rgba(21, 20, 19, 0.649);
-    padding: 10px;
+    padding: 15px;
     border-radius: 20px;
     white-space: pre-wrap;
     word-wrap: break-word;
     border: none;
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
     height: 500px;
     font-size: 32px;
     color: rgba(220, 224, 228, 0.788);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* FOOTER */
@@ -119,9 +129,18 @@ footer {
     align-items: center;
     background-color: rgb(0, 0, 0);
     padding: 25px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    position: relative; /* Remove o fixed para evitar problemas de layout */
+}
+
+/* Aviso */
+.container__aviso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(199, 201, 202);
+    font-size: 12px;
+    margin-top: 10px;
 }
 
 /* Estilos para tablets */
@@ -129,32 +148,22 @@ footer {
     .cabecalho__img__logo {
         width: 100px;
         height: 40px;
-        margin: 20px;
     }
 
     .container__div {
-        flex-direction: column;
-        align-items: center;
         gap: 50px;
     }
 
     textarea, #resultado {
-        width: 80%;
         height: 400px;
         font-size: 24px;
     }
 
-    .img__anjo {
-        width: 80%;
-    }
-
     .bnt__container {
-        flex-direction: column;
         gap: 12px;
     }
 
     .first__bnt, .second__bnt {
-        width: 80%;
         height: 50px;
         font-size: 16px;
     }
@@ -165,47 +174,27 @@ footer {
     .cabecalho__img__logo {
         width: 80px;
         height: 32px;
-        margin: 10px;
     }
 
     .container__div {
-        flex-direction: column;
-        align-items: center;
         gap: 20px;
     }
 
     textarea, #resultado {
-        width: 90%;
         height: 300px;
         font-size: 18px;
     }
 
-    .img__anjo {
-        width: 90%;
-    }
-
     .bnt__container {
-        flex-direction: column;
         gap: 8px;
     }
 
     .first__bnt, .second__bnt {
-        width: 90%;
         height: 40px;
         font-size: 14px;
     }
 
     footer {
-        flex-direction: column;
         padding: 10px;
     }
-}
-
-/* Aviso */
-.container__aviso{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: rgb(199, 201, 202);
-    font-size: 12px;
 }
