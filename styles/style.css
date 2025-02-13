@@ -103,8 +103,8 @@ textarea {
 #btnCopia {
     display: none;
     width: 100%;
-    max-width: 680px;
-    margin: 20px auto;
+    max-width: 600px;
+    margin-top: 25px;
 }
 
 /* RESULTADO */
